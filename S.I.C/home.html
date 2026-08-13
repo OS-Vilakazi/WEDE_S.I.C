@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+</head>
+<body style="background-color: darkblue; color: white; font-family: Arial, Helvetica, sans-serif; margin: 0;">
+
+    <!-- ============================================================
+         HEADER
+         Contains the site logo and the main navigation menu.
+         This same header/nav block is repeated on every page so that
+         users can move between pages from anywhere on the site.
+         The current page's link is coloured red to show active state.
+         ============================================================ -->
+    <header>
+        <nav style="background-color: black; padding: 15px; display: flex; align-items: center;">
+            <img src="images/logo.jpg" style="width: 120px; height: 60px;">
+            <a href="home.html" style="color: red; margin-left: 20px; text-decoration: none;">Home |</a>
+            <a href="about.html" style="color: white; margin-left: 10px; text-decoration: none;">About |</a>
+            <a href="services.html" style="color: white; margin-left: 10px; text-decoration: none;">Services |</a>
+            <a href="gallery.html" style="color: white; margin-left: 10px; text-decoration: none;">Gallery |</a>
+            <a href="enquiry.html" style="color: white; margin-left: 10px; text-decoration: none;">Enquire |</a>
+            <a href="contact.html" style="color: white; margin-left: 10px; text-decoration: none;">Contact us</a>
+        </nav>
+    </header>
+
+    <main style="padding: 40px;">
+
+        <!-- ============================================================
+             HERO SECTION
+             Main page heading, short intro paragraph, and a call-to-
+             action button that links through to the fixtures page.
+             ============================================================ -->
+        <section style="text-align: center; padding: 40px 20px;">
+            <h1 style="font-size: 40px; color: white;">The Match Day. On The Big Screen.</h1>
+            <p style="font-size: 18px; max-width: 600px; margin: 20px auto; color: lightgray;">
+                S.I.C brings live Formula 1 and football straight to Ster-Kinekor cinemas —
+                full sound, full screen, full crowd. Not a stream at home. A night out.
+            </p>
+            <a href="services.html" style="background-color: red; color: white; padding: 14px 26px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 10px;">
+                See Upcoming Screenings
+            </a>
+        </section>
+
+        <!-- ============================================================
+             "NEXT UP" PREVIEW
+             Quick preview table of the 3 soonest screenings.
+             Full list lives on services.html.
+             ============================================================ -->
+        <section style="background-color: black; padding: 30px; margin-top: 30px;">
+            <h2 style="text-align: center; color: white;">Next Up</h2>
+
+            <table style="width: 100%; color: white; border-collapse: collapse; margin-top: 20px;">
+                <tr style="border-bottom: 1px solid gray;">
+                    <td style="padding: 12px;">F1 — British Grand Prix</td>
+                    <td style="padding: 12px;">V&amp;A Waterfront</td>
+                    <td style="padding: 12px; color: dodgerblue; text-align: right;">Sat 20:00</td>
+                </tr>
+                <tr style="border-bottom: 1px solid gray;">
+                    <td style="padding: 12px;">Football — El Clasico</td>
+                    <td style="padding: 12px;">Canal Walk</td>
+                    <td style="padding: 12px; color: dodgerblue; text-align: right;">Sun 18:30</td>
+                </tr>
+                <tr>
+                    <td style="padding: 12px;">F1 — Monza Grand Prix</td>
+                    <td style="padding: 12px;">Sandton City</td>
+                    <td style="padding: 12px; color: dodgerblue; text-align: right;">Sun 15:00</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- ============================================================
+             "WHY S.I.C" SECTION
+             3-column table explaining the value proposition to visitors.
+             ============================================================ -->
+        <section style="padding: 40px 0; text-align: center;">
+            <h2>Why S.I.C</h2>
+            <table style="width: 100%; margin-top: 20px;">
+                <tr>
+                    <td style="width: 33%; padding: 15px; vertical-align: top;">
+                        <h3 style="color: red;">Sight &amp; Sound</h3>
+                        <p style="color: lightgray;">Every kick, lap and goal on a screen that dwarfs your TV.</p>
+                    </td>
+                    <td style="width: 33%; padding: 15px; vertical-align: top;">
+                        <h3 style="color: red;">Atmosphere</h3>
+                        <p style="color: lightgray;">Watch with a crowd of fans, not alone on the couch.</p>
+                    </td>
+                    <td style="width: 33%; padding: 15px; vertical-align: top;">
+                        <h3 style="color: red;">Off-Peak Slots</h3>
+                        <p style="color: lightgray;">Screenings never clash with the evening's film schedule.</p>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         Copyright notice with student number. Repeated on every page.
+         ============================================================ -->
+    <footer style="background-color: black; color: white; text-align: center; padding: 20px;">
+        &copy; ST10537650#Sport's in Cinema
+    </footer>
+
+</body>
+</html>
