@@ -1,88 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact page</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — S.I.C</title>
+<meta name="description" content="Contact S.I.C and find our screening locations at Ster-Kinekor cinemas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body style="color: white; font-family: Arial, Helvetica, sans-serif; margin: 0;">
+<body>
 
     <!-- ============================================================
          HEADER — same structure as home.html, "Contact" link highlighted
          ============================================================ -->
- <header>
-    <section class="top-nav">
-        <!-- Site Logo -->
-        <div>
-            <img src="images/logo.jpg" alt="S.I.C Logo" style="height: 35px; width: auto; display: block;">
-        </div>
-
-        <!-- Hidden Checkbox & Hamburger Icon -->
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-
-        <!-- Navigation Links -->
-        <ul class="menu">
-            <li><a href="home.html" class="nav-link active">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="enquiry.html" class="nav-link">Enquire</a></li>
-            <li><a href="contact.html" class="nav-link active-page">Contact us</a></li>
-        </ul>
-    </section>
+ <input type="checkbox" id="nav-toggle">
+<header class="site-header">
+  <div class="wrap">
+    <a href="home.html" class="logo">
+      <img src="images/logo.jpg" alt="S.I.C — Sport in Cinema logo">
+      <span class="logo-text">S<span>.</span>I<span>.</span>C</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Fixtures</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquire</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+    <label class="nav-toggle-label" for="nav-toggle" aria-controls="main-nav">☰ Menu</label>
+  </div>
 </header>
 
-    <main style="padding: 40px;">
+<main>
 
-        <h1>Find Us At Ster-Kinekor</h1>
-        <p style="max-width: 700px; color: lightgray;">
-            S.I.C screenings run inside select Ster-Kinekor cinemas. Find your nearest location below,
-            or send us a message.
-        </p>
+  <div class="page-header">
+    <div class="wrap">
+      <p class="eyebrow"><span class="dot"></span> Contact</p>
+      <h1>Find us at Ster-Kinekor</h1>
+      <p class="lede" style="max-width: 640px;">S.I.C screenings run inside select Ster-Kinekor cinemas. Pick your nearest location below, or send us a message.</p>
+    </div>
+  </div>
 
-        <!-- Three cinema locations (assignment requires more than 1 location) -->
-        <table style="width: 100%; margin-top: 30px;">
-            <tr>
-                <td style="width: 33%; background-color: black; padding: 20px; vertical-align: top;">
-                    <h3 style="color: red;">Ster-Kinekor V&amp;A Waterfront</h3>
-                    <p style="color: lightgray;">Dock Road, V&amp;A Waterfront, Cape Town, 8001<br>021 418 2364</p>
-                </td>
-                <td style="width: 33%; background-color: black; padding: 20px; vertical-align: top;">
-                    <h3 style="color: red;">Ster-Kinekor Canal Walk</h3>
-                    <p style="color: lightgray;">Century City, Cape Town, 7441<br>021 552 8007</p>
-                </td>
-                <td style="width: 33%; background-color: black; padding: 20px; vertical-align: top;">
-                    <h3 style="color: red;">Ster-Kinekor Sandton City</h3>
-                    <p style="color: lightgray;">5th Street, Sandton, Johannesburg, 2196<br>011 883 6555</p>
-                </td>
-            </tr>
-        </table>
+  <section class="section--tight">
+    <div class="wrap grid-3">
+      <div class="location-card">
+        <h3>Ster-Kinekor V&amp;A Waterfront</h3>
+        <p>Dock Road, V&amp;A Waterfront, Cape Town, 8001</p>
+        <p>021 418 2364</p>
+        <p>Screens used: 1, 4</p>
+      </div>
+      <div class="location-card">
+        <h3>Ster-Kinekor Canal Walk</h3>
+        <p>Century City, Cape Town, 7441</p>
+        <p>021 552 8007</p>
+        <p>Screens used: 2, 3</p>
+      </div>
+      <div class="location-card">
+        <h3>Ster-Kinekor Sandton City</h3>
+        <p>5th Street, Sandton, Johannesburg, 2196</p>
+        <p>011 883 6555</p>
+        <p>Screens used: 6</p>
+      </div>
+    </div>
+  </section>
 
-        <div class="form-container">
-    <span class="heading">Get In Touch</span>
-    <form class="form" action="#">
-        <input class="input" type="text" id="name" name="name" placeholder="Full Name" required>
-        <input class="input" type="email" id="email" name="email" placeholder="Email Address" required>
-        <textarea class="textarea" id="message" name="message" rows="5" placeholder="Message" required></textarea>
-        
-        <div class="button-container">
-            <button class="send-button" type="submit">Send Message</button>
-            <div class="reset-button-container">
-                <button class="reset-button" type="reset">Reset</button>
-            </div>
-        </div>
-    </form>
-</div>
+  <section class="panel-alt">
+    <div class="wrap grid-2">
+      <div>
+        <h2>Get in touch</h2>
+        <p class="lede">General questions, media enquiries, or feedback on a screening you attended &mdash; send us a message and we'll get back to you.</p>
+        <ul class="list-check mt-lg">
+          <li>Email: hello@sic-cinema.co.za</li>
+          <li>Phone: 087 550 1122</li>
+          <li>Hours: Mon&ndash;Sun, 09:00&ndash;21:00</li>
+        </ul>
+      </div>
 
-    </main>
+      <div class="form-panel">
+        <form action="#" method="post">
+          <div class="field">
+            <label for="c-name">Full name</label>
+            <input class="input" type="text" id="c-name" name="name" placeholder="Full Name" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="c-email">Email address</label>
+            <input class="input" type="email" id="c-email" name="email" placeholder="Email Address" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="c-message">Message</label>
+            <textarea class="textarea" id="c-message" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary">Send message</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-    <!-- Footer — copyright notice, same on every page -->
-    <footer style="background-color: black; color: white; text-align: center; padding: 20px;">
-        &copy; ST10537650#Sport's in Cinema
-    </footer>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="logo-text">S<span>.</span>I<span>.</span>C</span>
+        <p class="lede mt-lg" style="max-width: 320px;">Live sport, big screen, real crowd — screening inside Ster-Kinekor cinemas across South Africa.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Fixtures</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul>
+          <li>Ster-Kinekor V&amp;A Waterfront</li>
+          <li>Ster-Kinekor Canal Walk</li>
+          <li>Ster-Kinekor Sandton City</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; ST10537650 — Sport in Cinema (S.I.C). Student project — WEDE5020.</span>
+      <span>Screened in partnership with Ster-Kinekor.</span>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
