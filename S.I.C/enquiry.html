@@ -1,117 +1,163 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <meta charset="UTF-8">
-    <title>Enquiry page</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquire — S.I.C</title>
+<meta name="description" content="Enquire about sponsorship, group bookings or supporters' club partnerships with S.I.C.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body style="color: white; font-family: Arial, Helvetica, sans-serif; margin: 0;">
+<body>
 
     <!-- ============================================================
          HEADER — same structure as home.html, "Enquire" link highlighted
          ============================================================ -->
- <header>
-    <section class="top-nav">
-        <!-- Site Logo -->
-        <div>
-            <img src="images/logo.jpg" alt="S.I.C Logo" style="height: 35px; width: auto; display: block;">
-        </div>
-
-        <!-- Hidden Checkbox & Hamburger Icon -->
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-
-        <!-- Navigation Links -->
-        <ul class="menu">
-            <li><a href="home.html" class="nav-link active">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="enquiry.html" class="nav-link">Enquire</a></li>
-            <li><a href="contact.html" class="nav-link active-page">Contact us</a></li>
-        </ul>
-    </section>
+ <<input type="checkbox" id="nav-toggle">
+<header class="site-header">
+  <div class="wrap">
+    <a href="home.html" class="logo">
+      <img src="images/logo.jpg" alt="S.I.C — Sport in Cinema logo">
+      <span class="logo-text">S<span>.</span>I<span>.</span>C</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Fixtures</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html" aria-current="page">Enquire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <label class="nav-toggle-label" for="nav-toggle" aria-controls="main-nav">☰ Menu</label>
+  </div>
 </header>
 
-    <main style="padding: 40px;">
+<main>
 
-        <h1>Sponsor A Screening Or Book A Group</h1>
-        <p style="max-width: 700px; color: lightgray;">
-            Whether you're a brand looking to reach match-day crowds, or a supporters' club
-            after your own screen — tell us what you need.
-        </p>
+  <div class="page-header">
+    <div class="wrap">
+      <p class="eyebrow"><span class="dot"></span> Enquiries</p>
+      <h1>Sponsor a screening or book a group</h1>
+      <p class="lede" style="max-width: 640px;">Whether you're a brand looking to reach match-day crowds, or a supporters' club after your own screen &mdash; tell us what you need.</p>
+    </div>
+  </div>
 
-        <h2>What We Can Help With</h2>
-        <ul style="color: lightgray; line-height: 1.8;">
-            <li>Sponsorship — brand visibility at screenings and activation space in the foyer.</li>
-            <li>Group bookings — block seating for supporters' clubs, offices or friend groups (10+ seats).</li>
-            <li>Private screen hire — a full screen for your organisation on a specific fixture.</li>
-            <li>General questions — anything about fixtures, pricing or locations.</li>
+  <section>
+    <div class="wrap grid-2">
+      <div>
+        <h2>What we can help with</h2>
+        <ul class="list-check">
+          <li><strong>Sponsorship</strong> &mdash; brand visibility at screenings, on-screen mentions, and activation space in the cinema foyer.</li>
+          <li><strong>Group bookings</strong> &mdash; block seating for supporters' clubs, offices or friend groups (10+ seats).</li>
+          <li><strong>Private screen hire</strong> &mdash; a full screen for your organisation on a specific fixture.</li>
+          <li><strong>General questions</strong> &mdash; anything about upcoming fixtures, pricing or locations.</li>
         </ul>
+        <p class="form-note">We usually respond within 2 working days. For anything urgent, use the contact details on the <a href="contact.html" class="text-blue">Contact page</a>.</p>
 
-        <!-- ============================================================
-             ENQUIRY FORM
-             Collects name, email, phone, enquiry type and message.
-             No backend/JS attached — action="#" is a placeholder until
-             this is wired up to a real form handler.
-             ============================================================ -->
         <!-- ============================================================
              HEAD OFFICE LOCATION
              Where sponsorship / group-booking enquiries are handled from.
-             Same map-placeholder pattern used on the Contact page.
              ============================================================ -->
-        <h2>Visit Us</h2>
-        <table style="width: 100%; margin-top: 10px; margin-bottom: 30px;">
-            <tr>
-                <td style="width: 50%; background-color: black; padding: 20px; vertical-align: top;">
-                    <h3 style="color: red; margin-top: 0;">S.I.C Head Office</h3>
-                    <p style="color: lightgray; margin-bottom: 5px;">Ster-Kinekor Mall of Africa, Waterfall City, Midrand, 1685</p>
-                    <p style="color: lightgray; margin-bottom: 0;">GPS: -26.0155, 28.1023</p>
-                </td>
-                <td style="width: 50%; vertical-align: top;">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.5509284966765!2d28.10233138355626!3d-26.01552411838785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9572017000fa51%3A0xbf9522872f16efec!2sSter-Kinekor%20Mall%20of%20Africa!5e0!3m2!1sen!2sza!4v1786660643928!5m2!1sen!2sza"
-                        width="100%" height="220" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
-                </td>
-            </tr>
-        </table>
-
-        <div class="form-container">
-    <span class="heading">Enquiry Form</span>
-    <form class="form" action="#">
-        <input class="input" type="text" id="name" name="name" placeholder="Full Name" required>
-        
-        <input class="input" type="email" id="email" name="email" placeholder="Email Address" required>
-        
-        <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number">
-        
-        <select class="input" id="enquiry-type" name="enquiry-type" required>
-            <option value="" disabled selected>Select Enquiry Type</option>
-            <option value="sponsorship">Sponsorship</option>
-            <option value="group-booking">Group Booking</option>
-            <option value="private-screen">Private Screen Hire</option>
-            <option value="general">General Question</option>
-        </select>
-        
-        <textarea class="textarea" id="message" name="message" rows="5" placeholder="Message" required></textarea>
-        
-        <div class="button-container">
-            <button class="send-button" type="submit">Send Enquiry</button>
-            <div class="reset-button-container">
-                <button class="reset-button" type="reset">Reset</button>
-            </div>
+        <h2 class="mt-lg">Visit us</h2>
+        <div class="location-card" style="margin-bottom: 1rem;">
+          <h3>S.I.C Head Office</h3>
+          <p>Ster-Kinekor Mall of Africa, Waterfall City, Midrand, 1685</p>
+          <p>GPS: -26.0155, 28.1023</p>
         </div>
-    </form>
-</div>
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3585.5509284966765!2d28.10233138355626!3d-26.01552411838785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9572017000fa51%3A0xbf9522872f16efec!2sSter-Kinekor%20Mall%20of%20Africa!5e0!3m2!1sen!2sza!4v1786660643928!5m2!1sen!2sza"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            title="Map — S.I.C Head Office, Ster-Kinekor Mall of Africa"></iframe>
+        </div>
+      </div>
 
-    </main>
+      <div class="form-panel">
+        <form action="#" method="post">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full name</label>
+              <input class="input" type="text" id="name" name="name" placeholder="Full Name" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="email">Email address</label>
+              <input class="input" type="email" id="email" name="email" placeholder="Email Address" required autocomplete="email">
+            </div>
+          </div>
 
-    <!-- Footer — copyright notice, same on every page -->
-    <footer style="background-color: black; color: white; text-align: center; padding: 20px;">
-        &copy; ST10537650#Sport's in Cinema
-    </footer>
+          <div class="field-row">
+            <div class="field">
+              <label for="phone">Phone number</label>
+              <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number" autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="enquiry-type">Enquiry type</label>
+              <select class="input" id="enquiry-type" name="enquiry-type" required>
+                <option value="" disabled selected>Select Enquiry Type</option>
+                <option value="sponsorship">Sponsorship</option>
+                <option value="group-booking">Group booking</option>
+                <option value="private-screen">Private screen hire</option>
+                <option value="general">General question</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="organisation">Organisation / supporters' club (optional)</label>
+            <input class="input" type="text" id="organisation" name="organisation" placeholder="Organisation">
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea class="textarea" id="message" name="message" rows="5" placeholder="Tell us which fixture, how many seats, or what you'd like to sponsor..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn--primary">Send enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="logo-text">S<span>.</span>I<span>.</span>C</span>
+        <p class="lede mt-lg" style="max-width: 320px;">Live sport, big screen, real crowd — screening inside Ster-Kinekor cinemas across South Africa.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Fixtures</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul>
+          <li>Ster-Kinekor V&amp;A Waterfront</li>
+          <li>Ster-Kinekor Canal Walk</li>
+          <li>Ster-Kinekor Sandton City</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; ST10537650 — Sport in Cinema (S.I.C). Student project — WEDE5020.</span>
+      <span>Screened in partnership with Ster-Kinekor.</span>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
