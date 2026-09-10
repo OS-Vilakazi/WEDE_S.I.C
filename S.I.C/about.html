@@ -1,85 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
-    <meta charset="UTF-8">
-    <title>About page</title>
-    <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About S.I.C — Sport in Cinema</title>
+<meta name="description" content="Learn about S.I.C's mission to bring live sport back to the big screen through a partnership with Ster-Kinekor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Open+Sans:wght@400;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
 </head>
-<body style="color: white; font-family: Arial, Helvetica, sans-serif; margin: 0;">
-
+<body>
     <!-- ============================================================
          HEADER — same structure as home.html, "About" link highlighted
          ============================================================ -->
-    <header>
-    <section class="top-nav">
-        <!-- Site Logo -->
-        <div>
-            <img src="images/logo.jpg" alt="S.I.C Logo" style="height: 35px; width: auto; display: block;">
-        </div>
-
-        <!-- Hidden Checkbox & Hamburger Icon -->
-        <input id="menu-toggle" type="checkbox" />
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-
-        <!-- Navigation Links -->
-        <ul class="menu">
-            <li><a href="home.html" class="nav-link active">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="services.html" class="nav-link">Services</a></li>
-            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
-            <li><a href="enquiry.html" class="nav-link">Enquire</a></li>
-            <li><a href="contact.html" class="nav-link active-page">Contact us</a></li>
-        </ul>
-    </section>
+    <input type="checkbox" id="nav-toggle">
+<header class="site-header">
+  <div class="wrap">
+    <a href="home.html" class="logo">
+      <img src="images/logo.jpg" alt="S.I.C — Sport in Cinema logo">
+      <span class="logo-text">S<span>.</span>I<span>.</span>C</span>
+    </a>
+    <nav class="main-nav" id="main-nav" aria-label="Primary">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="services.html">Fixtures</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="enquiry.html">Enquire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <label class="nav-toggle-label" for="nav-toggle" aria-controls="main-nav">☰ Menu</label>
+  </div>
 </header>
 
-    <main style="padding: 40px;">
+<main>
 
-        <!-- Intro: why the organisation exists -->
-        <h1>Why We Built S.I.C</h1>
-        <p style="max-width: 700px; color: lightgray;">
-            South African cinema attendance has been falling for years as streaming pulls
-            audiences home. We think the fix isn't a new film — it's a new reason to leave the house.
-        </p>
+  <div class="page-header">
+    <div class="wrap">
+      <p class="eyebrow"><span class="dot"></span> About Us</p>
+      <h1>Why we built S.I.C</h1>
+      <p class="lede" style="max-width: 640px;">South African cinema attendance has been falling for years as streaming pulls audiences home. We think the fix isn't a new film &mdash; it's a new reason to leave the house.</p>
+    </div>
+  </div>
 
-        <h2>Our Story</h2>
-        <p style="max-width: 700px; color: lightgray;">
-            S.I.C (Sport in Cinema) partners with Ster-Kinekor, South Africa's largest cinema
-            exhibitor, to use quiet daytime and weekend slots productively: screening live
-            Formula 1 races and football matches on full cinema screens, with proper sound and
-            a room full of fellow fans.
-        </p>
+  <section>
+    <div class="wrap grid-2">
+      <div>
+        <h2>Our story</h2>
+        <p>S.I.C (Sport in Cinema) started with a simple observation: cinemas sit half-empty during the day and on weekend mornings, while sports fans crowd into pubs, sports bars and living rooms to watch the same fixtures on much smaller screens.</p>
+        <p>We partner with Ster-Kinekor &mdash; South Africa's largest cinema exhibitor &mdash; to use that unused time productively: screening live Formula 1 races and football matches on full cinema screens, with proper sound and a room full of fellow fans.</p>
+        <p>The goal was never to make sport more popular. It was already popular. The goal is to make the cinema itself feel alive again &mdash; noisy, social, and worth leaving the house for.</p>
+      </div>
+      <div>
+        <h2>Mission &amp; vision</h2>
+        <div class="card" style="margin-bottom: 1.25rem;">
+          <span class="num">Mission</span>
+          <p style="margin: 0;">To turn the cinema back into a lively social destination by giving sports fans a big-screen, big-atmosphere alternative to watching alone at home.</p>
+        </div>
+        <div class="card">
+          <span class="num">Vision</span>
+          <p style="margin: 0;">To become the go-to South African venue for watching major sporting events outside of stadiums and sports bars.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Mission / vision, side by side -->
-        <table style="width: 100%; margin-top: 30px;">
-            <tr>
-                <td style="width: 50%; background-color: black; padding: 20px; vertical-align: top;">
-                    <h3 style="color: red;">Mission</h3>
-                    <p style="color: lightgray;">To turn the cinema back into a lively social destination by giving sports fans a big-screen, big-atmosphere alternative to watching alone at home.</p>
-                </td>
-                <td style="width: 50%; background-color: black; padding: 20px; vertical-align: top;">
-                    <h3 style="color: red;">Vision</h3>
-                    <p style="color: lightgray;">To become the go-to South African venue for watching major sporting events outside of stadiums and sports bars.</p>
-                </td>
-            </tr>
-        </table>
+  <section class="panel-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Who it's for</p>
+        <h2>Built for the fans who'd rather watch together</h2>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <span class="num">Fans</span>
+          <h3>Motorsport &amp; football fans</h3>
+          <p>Aged 18&ndash;40, looking for a proper social viewing experience instead of another night on the couch.</p>
+        </div>
+        <div class="card">
+          <span class="num">Groups</span>
+          <h3>Friend groups &amp; supporters' clubs</h3>
+          <p>Looking for a reliable venue to book out for match days and race weekends.</p>
+        </div>
+        <div class="card">
+          <span class="num">Cinema-goers</span>
+          <h3>Regular Ster-Kinekor customers</h3>
+          <p>Given a new reason to come back to their local cinema outside of new film releases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Target audience list -->
-        <h2 style="margin-top: 40px;">Who It's For</h2>
-        <ul style="color: lightgray; line-height: 1.8;">
-            <li>Motorsport and football fans aged 18–40 who want a social viewing experience.</li>
-            <li>Friend groups and supporters' clubs looking for a venue for match days and race weekends.</li>
-            <li>Regular Ster-Kinekor customers given a new reason to come back to the cinema.</li>
+  <section>
+    <div class="wrap grid-2" style="align-items: center;">
+      <div>
+        <h2>How a screening works</h2>
+        <ul class="list-check">
+          <li>Book your seat online for a listed F1 or football fixture.</li>
+          <li>Arrive 20 minutes early &mdash; doors open with pre-match atmosphere and concessions.</li>
+          <li>Watch the full broadcast, live, on a full cinema screen with cinema sound.</li>
+          <li>Reactions included: cheering, groaning and everything in between is part of the ticket.</li>
         </ul>
+      </div>
+      <div class="card">
+        <span class="num">Next step</span>
+        <h3>Sponsor or book a group screening</h3>
+        <p>Brands, supporters' clubs and offices can enquire about sponsoring a screening or booking a private screen.</p>
+        <a href="enquiry.html" class="btn btn--primary mt-lg">Go to enquiry form</a>
+      </div>
+    </div>
+  </section>
 
-    </main>
+</main>
 
-    <!-- Footer — copyright notice, same on every page -->
-    <footer style="background-color: black; color: white; text-align: center; padding: 20px;">
-        &copy; ST10537650#Sport's in Cinema
-    </footer>
+<!-- ============================================================
+     FOOTER
+     Site links, cinema locations and copyright. Repeated on every page.
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <span class="logo-text">S<span>.</span>I<span>.</span>C</span>
+        <p class="lede mt-lg" style="max-width: 320px;">Live sport, big screen, real crowd — screening inside Ster-Kinekor cinemas across South Africa.</p>
+      </div>
+      <div>
+        <h4>Site</h4>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Fixtures</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="enquiry.html">Enquire</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Locations</h4>
+        <ul>
+          <li>Ster-Kinekor V&amp;A Waterfront</li>
+          <li>Ster-Kinekor Canal Walk</li>
+          <li>Ster-Kinekor Sandton City</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; ST10537650 — Sport in Cinema (S.I.C). Student project — WEDE5020.</span>
+      <span>Screened in partnership with Ster-Kinekor.</span>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
