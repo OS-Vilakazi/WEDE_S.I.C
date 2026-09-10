@@ -51,21 +51,21 @@
         <h2 style="margin-top: 40px;">Get In Touch</h2>
         <p style="color: lightgray;">Email: hello@sic-cinema.co.za<br>Phone: 087 550 1122<br>Hours: Mon–Sun, 09:00–21:00</p>
 
-        <!-- General contact form — no backend/JS attached; action="#" is a placeholder -->
-        <form action="#" style="background-color: black; padding: 30px; max-width: 500px; margin-top: 20px;">
-
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;"><br>
-
-            <label for="email">Email Address</label><br>
-            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;"><br>
-
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;"></textarea><br>
-
-            <input type="submit" value="Send Message" style="background-color: red; color: white; padding: 14px 26px; border: none; font-weight: bold;">
-
-        </form>
+        <div class="form-container">
+    <span class="heading">Get In Touch</span>
+    <form class="form" action="#">
+        <input class="input" type="text" id="name" name="name" placeholder="Full Name" required>
+        <input class="input" type="email" id="email" name="email" placeholder="Email Address" required>
+        <textarea class="textarea" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+        
+        <div class="button-container">
+            <button class="send-button" type="submit">Send Message</button>
+            <div class="reset-button-container">
+                <button class="reset-button" type="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
 
     </main>
 
