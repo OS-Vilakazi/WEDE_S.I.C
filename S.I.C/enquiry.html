@@ -78,32 +78,33 @@
             </tr>
         </table>
 
-        <h2>Enquiry Form</h2>
-        <form action="#" style="background-color: black; padding: 30px; max-width: 500px;">
-
-            <label for="name">Full Name</label><br>
-            <input type="text" id="name" name="name" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;"><br>
-
-            <label for="email">Email Address</label><br>
-            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;"><br>
-
-            <label for="phone">Phone Number</label><br>
-            <input type="tel" id="phone" name="phone" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;"><br>
-
-            <label for="enquiry-type">Enquiry Type</label><br>
-            <select id="enquiry-type" name="enquiry-type" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;">
-                <option value="sponsorship">Sponsorship</option>
-                <option value="group-booking">Group Booking</option>
-                <option value="private-screen">Private Screen Hire</option>
-                <option value="general">General Question</option>
-            </select><br>
-
-            <label for="message">Message</label><br>
-            <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; margin: 8px 0 20px 0;"></textarea><br>
-
-            <input type="submit" value="Send Enquiry" style="background-color: red; color: white; padding: 14px 26px; border: none; font-weight: bold;">
-
-        </form>
+        <div class="form-container">
+    <span class="heading">Enquiry Form</span>
+    <form class="form" action="#">
+        <input class="input" type="text" id="name" name="name" placeholder="Full Name" required>
+        
+        <input class="input" type="email" id="email" name="email" placeholder="Email Address" required>
+        
+        <input class="input" type="tel" id="phone" name="phone" placeholder="Phone Number">
+        
+        <select class="input" id="enquiry-type" name="enquiry-type" required>
+            <option value="" disabled selected>Select Enquiry Type</option>
+            <option value="sponsorship">Sponsorship</option>
+            <option value="group-booking">Group Booking</option>
+            <option value="private-screen">Private Screen Hire</option>
+            <option value="general">General Question</option>
+        </select>
+        
+        <textarea class="textarea" id="message" name="message" rows="5" placeholder="Message" required></textarea>
+        
+        <div class="button-container">
+            <button class="send-button" type="submit">Send Enquiry</button>
+            <div class="reset-button-container">
+                <button class="reset-button" type="reset">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
 
     </main>
 
