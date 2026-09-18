@@ -11,10 +11,15 @@
 </head>
 <body>
 
-    <!-- ============================================================
-         HEADER — same structure as home.html, "Gallery" link highlighted
-         ============================================================ -->
- <input type="checkbox" id="nav-toggle">
+<!-- ============================================================
+     HEADER
+     Site logo + main navigation. Repeated on every page so visitors
+     can move around the site from anywhere. The current page's link
+     is marked with aria-current="page" (styled red/underlined in CSS).
+     The mobile menu below is pure CSS: a hidden checkbox (#nav-toggle)
+     paired with a <label> button — no JavaScript is used.
+     ============================================================ -->
+<input type="checkbox" id="nav-toggle">
 <header class="site-header">
   <div class="wrap">
     <a href="home.html" class="logo">
@@ -46,12 +51,33 @@
   </div>
 
   <!-- ============================================================
+       ROTATING CUBE FEATURE
+       A pure-CSS 3D cube cycling through 6 photos, on an animated
+       backdrop. No JavaScript — see .cube-stage / .gallery in
+       css/style.css.
+       ============================================================ -->
+  <section class="section--tight">
+    <div class="wrap">
+      <div class="cube-stage">
+        <div class="gallery">
+        <img src="images/gallery-6.jpg" alt="Escalator up to the Ster-Kinekor entrance" loading="lazy">
+        <img src="images/gallery-9.jpg" alt="Settling in with popcorn and a drink before the film" loading="lazy">
+        <img src="images/gallery-12.jpg" alt="Looking up into the Ster-Kinekor Classic atrium" loading="lazy">
+        <img src="images/gallery-8.jpg" alt="The Ster-Kinekor sign above the ticket counter" loading="lazy">
+        <img src="images/gallery-11.jpg" alt="A quiet cinema corridor between screenings" loading="lazy">
+        <img src="images/gallery-13.jpg" alt="Fresh popcorn and a Coca-Cola, ready to go" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
        PHOTO GRID
        CSS Grid layout, responsive column count via media queries.
        Each <img> ships a srcset + sizes pair so the browser can pick
        the right image for its viewport width (Part 2, section 3.3).
        ============================================================ -->
-  <section>
+  <section class="panel-alt">
     <div class="wrap">
       <div class="gallery-grid">
       <figure class="gallery-item">
@@ -103,6 +129,86 @@
           loading="lazy"
           alt="Crowd reaction during a live goal">
         <figcaption>Crowd reaction during a live goal</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-6.jpg"
+          srcset="images/gallery-6.jpg 720w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="720" height="951"
+          loading="lazy"
+          alt="Escalator up to the Ster-Kinekor entrance">
+        <figcaption>Escalator up to the Ster-Kinekor entrance</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-7.jpg"
+          srcset="images/gallery-7.jpg 1200w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="1200" height="1600"
+          loading="lazy"
+          alt="The concession counter, ready for collection">
+        <figcaption>The concession counter, ready for collection</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-8.jpg"
+          srcset="images/gallery-8.jpg 1080w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="1080" height="1920"
+          loading="lazy"
+          alt="The Ster-Kinekor sign above the ticket counter">
+        <figcaption>The Ster-Kinekor sign above the ticket counter</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-9.jpg"
+          srcset="images/gallery-9.jpg 736w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="736" height="981"
+          loading="lazy"
+          alt="Settling in with popcorn and a drink before the film">
+        <figcaption>Settling in with popcorn and a drink before the film</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-10.jpg"
+          srcset="images/gallery-10.jpg 235w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="235" height="132"
+          loading="lazy"
+          alt="Inside an IMAX auditorium at Ster-Kinekor East Rand">
+        <figcaption>Inside an IMAX auditorium at Ster-Kinekor East Rand</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-11.jpg"
+          srcset="images/gallery-11.jpg 720w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="720" height="1280"
+          loading="lazy"
+          alt="A quiet cinema corridor between screenings">
+        <figcaption>A quiet cinema corridor between screenings</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-12.jpg"
+          srcset="images/gallery-12.jpg 1200w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="1200" height="1600"
+          loading="lazy"
+          alt="Looking up the escalators into the Ster-Kinekor Classic atrium">
+        <figcaption>Looking up the escalators into the Ster-Kinekor Classic atrium</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img
+          src="images/gallery-13.jpg"
+          srcset="images/gallery-13.jpg 1200w"
+          sizes="(max-width: 560px) 100vw, (max-width: 860px) 50vw, 33vw"
+          width="1200" height="1600"
+          loading="lazy"
+          alt="Fresh popcorn and a Coca-Cola, ready to go">
+        <figcaption>Fresh popcorn and a Coca-Cola, ready to go</figcaption>
       </figure>
       </div>
     </div>

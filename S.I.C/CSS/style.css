@@ -9,6 +9,9 @@
    Type:    Display — Montserrat (600/700/800/900, tracked)
             Body    — Open Sans
             Utility — "Space Mono" (fixture times / scoreboard digits)
+   Note:    No JavaScript is used anywhere in this stylesheet or the
+            pages that reference it. The mobile nav menu is a pure
+            CSS checkbox/label toggle (see "header / nav" below).
    ========================================================= */
 
 :root {
@@ -206,18 +209,42 @@ p { margin: 0 0 1rem; color: var(--offwhite); }
 
 .nav-toggle-label { display: none; }
 
+/* Lock the page behind the mobile menu while it's open. Using :has()
+   here (instead of JavaScript) means the background page can't be
+   scrolled — the classic reason a menu "needs" its own scrollbar when
+   the visitor is pinch-zoomed in on a small screen. */
+body:has(#nav-toggle:checked) { overflow: hidden; }
+
 @media (max-width: 760px) {
   .main-nav {
     position: fixed;
-    inset: 4.75rem 0 0 0;
+    top: 4.75rem;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* dvh tracks the browser's *visual* viewport, so the panel still
+       fits the screen exactly when the visitor has pinch-zoomed in —
+       vh alone can end up taller than what's visible and force a
+       scrollbar inside the menu itself. */
+    height: calc(100dvh - 4.75rem);
+    max-height: calc(100dvh - 4.75rem);
     background: var(--charcoal);
     border-top: 1px solid var(--line);
     transform: translateX(100%);
     transition: transform 0.25s ease;
     padding: 2rem 1.5rem;
-    overflow-y: auto;
+    /* No internal scroll — ever. The menu only has 6 links, so it
+       always fits; if it didn't, items should shrink (see the ul gap
+       below) rather than scroll. */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
   }
-  .main-nav ul { flex-direction: column; gap: 1.25rem; }
+  .main-nav ul {
+    flex-direction: column;
+    gap: clamp(0.75rem, 4vh, 1.25rem);
+    width: 100%;
+  }
 
   .nav-toggle-label {
     display: inline-flex;
@@ -603,3 +630,75 @@ section { padding: 5.5rem 0; }
 .text-blue { color: var(--blue); }
 .text-red { color: var(--red); }
 .mt-lg { margin-top: 1.5rem; }
+
+/* =========================================================
+   ROTATING CUBE GALLERY (Gallery page)
+   The 6-face rotating cube + cycling backdrop, scoped to its own
+   ".cube-stage" panel rather than the real <body> — the original
+   snippet animates `body`'s background directly, which would wipe
+   out this site's fixed diamond-pattern background on every page.
+   Contained here, it becomes a feature panel instead of a global
+   override, and the rest of the site keeps its own look.
+   ========================================================= */
+.cube-stage {
+  display: grid;
+  place-content: center;
+  min-height: 420px;
+  padding: 3rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  animation: cubeBg 9s infinite;
+}
+
+@keyframes cubeBg {
+  0%, 3%   { background: #774f38; }
+  14%, 19% { background: #c5e0dc; }
+  31%, 36% { background: #036564; }
+  45%, 55% { background: #b38184; }
+  64%, 69% { background: #424254; }
+  81%, 86% { background: #4dbce9; }
+  97%, to  { background: #774f38; }
+}
+
+.gallery {
+  --s: 190px; /* cube face size — kept a little smaller to fit the panel */
+
+  display: grid;
+  transform-style: preserve-3d;
+  --_p: perspective(calc(2.5 * var(--s)));
+  animation: cubeRotate 9s infinite cubic-bezier(.5, -0.5, .5, 1.5);
+}
+.gallery img {
+  grid-area: 1 / 1;
+  width: var(--s);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 4px;
+  transform: var(--_t, ) translateZ(calc(var(--s) / 2));
+}
+.gallery img:nth-child(2) { --_t: rotateX(-90deg); }
+.gallery img:nth-child(3) { --_t: rotateY(90deg); }
+.gallery img:nth-child(4) { --_t: rotateX(180deg) rotate(90deg); }
+.gallery img:nth-child(5) { --_t: rotateX(90deg); }
+.gallery img:nth-child(6) { --_t: rotateY(-90deg); }
+
+@keyframes cubeRotate {
+  0%, 3%    { transform: var(--_p) rotate3d(0, 0, 0, 0deg); }
+  14%, 19%  { transform: var(--_p) rotate3d(-1, 1, 0, 180deg); }
+  31%, 36%  { transform: var(--_p) rotate3d(0, -1, 0, 90deg); }
+  47%, 52%  { transform: var(--_p) rotate3d(1, 0, 0, 90deg); }
+  64%, 69%  { transform: var(--_p) rotate3d(1, 0, 0, -90deg); }
+  81%, 86%  { transform: var(--_p) rotate3d(0, 1, 0, 90deg); }
+  97%, 100% { transform: var(--_p) rotate3d(0, 0, 0, 0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cube-stage, .gallery { animation: none; }
+  .gallery { transform: perspective(1px); }
+}
+
+@media (max-width: 560px) {
+  .gallery { --s: 140px; }
+  .cube-stage { min-height: 320px; }
+}

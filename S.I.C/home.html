@@ -11,14 +11,15 @@
 </head>
 <body>
 
-    <!-- ============================================================
-         HEADER
-         Contains the site logo and the main navigation menu.
-         This same header/nav block is repeated on every page so that
-         users can move between pages from anywhere on the site.
-         The current page's link is coloured red to show active state.
-         ============================================================ -->
-    <input type="checkbox" id="nav-toggle">
+<!-- ============================================================
+     HEADER
+     Site logo + main navigation. Repeated on every page so visitors
+     can move around the site from anywhere. The current page's link
+     is marked with aria-current="page" (styled red/underlined in CSS).
+     The mobile menu below is pure CSS: a hidden checkbox (#nav-toggle)
+     paired with a <label> button — no JavaScript is used.
+     ============================================================ -->
+<input type="checkbox" id="nav-toggle">
 <header class="site-header">
   <div class="wrap">
     <a href="home.html" class="logo">
@@ -39,7 +40,6 @@
   </div>
 </header>
 
-<marquee behavior="" direction="">
 <div class="ticker" aria-label="Upcoming screenings ticker">
   <div class="ticker__track">
     <span>&#127937; F1 &mdash; BRITISH GP &middot; SAT 20:00 &middot; V&amp;A WATERFRONT</span>
@@ -52,7 +52,7 @@
     <span>&#9917; FOOTBALL &mdash; LOCAL DERBY &middot; FRI 19:45 &middot; GATEWAY</span>
   </div>
 </div>
-</marquee>
+
 <main>
 
   <!-- ============================================================
